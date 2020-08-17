@@ -1,0 +1,22 @@
+schema {
+  query: Query
+}
+
+type Actor{
+  actorId :  ID!,
+  firstName : String,
+  lastName : String,
+  dob : String,
+  address : String,
+  filmId : Int,
+  film: film
+}
+type film {
+  filmId : ID!,
+  name : String,
+  dateOfLaunch : String
+}
+
+type Query{
+  getActorById(actorId:Int) : Actor
+}
